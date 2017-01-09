@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>“湘阅读”文学阅读网展示</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+*{
+	color:#333333;
+}
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+.section2 p { position: relative; left: -120%;}
+.section3 p { position: relative; bottom: -120%;}
+.section4 p { position: relative; left: -120%;}
+.section5 p { display: none;}
+.section6 p { position: relative; left: -120%;}
+.section7 p { position: relative; bottom: -120%;}
+.section8 p { display: none;}
+#img1{ position:absolute;top:5%;left:2%;}
+#img2{ position:absolute;top:5%;left:2%;display: none;}
+#img3{ position:absolute;top:5%;left:2%;;display: none;}
+#img4{ position:absolute;top:5%;left:2%;display: none;}
+#img5{ position:absolute;top:5%;left:2%;display: none;}
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(document).ready(function() {
+	$.fn.fullpage({//$.fn是指jquery的命名空间，加上fn上的方法及属性，会对jquery实例每一个有效，这里声明使用fullpage插件
+		slidesColor: ['#f6eae4', '#f6eae4', '#f6eae4', '#f6eae4', '#f6eae4','#f6eae4','#f6eae4','#f6eae4','#f6eae4'],
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9'],
+		afterLoad: function(anchorLink, index){
+			if(index == 2){
+				$('.section2').find('p').delay(500).animate({
+					left: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 3){
+				$('.section3').find('p').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 4){
+				$('.section4').find('p').delay(500).animate({
+					left: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 5){
+				$('.section5').find('p').fadeIn(2000);
+			}
+			if(index == 6){
+				$('.section6').find('p').delay(500).animate({
+					left: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 7){
+				$('.section7').find('p').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 8){
+				$('.section8').find('p').fadeIn(2000);
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '2'){
+				$('.section2').find('p').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '3'){
+				$('.section3').find('p').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '4'){
+				$('.section4').find('p').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '5'){
+				$('.section5').find('p').fadeOut(2000);
+			}
+			if(index == '6'){
+				$('.section6').find('p').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '7'){
+				$('.section7').find('p').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '8'){
+				$('.section8').find('p').fadeOut(2000);
+			}
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div class="section section1">
+    <img src="imgs/1.png" id="img1"/>
+    <img src="imgs/2.png" id="img2"/>
+    <img src="imgs/3.png" id="img3"/>
+    <img src="imgs/4.png" id="img4"/>
+    <img src="imgs/5.png" id="img5"/>
+    <script>
+	setTimeout(function(){
+			$("#img1").fadeOut(1000);
+		    },2000);
+    setTimeout(function(){
+			$("#img2").fadeIn(1000);
+		    },2000);
+	setTimeout(function(){
+			$("#img2").fadeOut(1000);
+		    },4000);
+	setTimeout(function(){
+			$("#img3").fadeIn(1000);
+		    },4000);
+    setTimeout(function(){
+			$("#img3").fadeOut(1000);
+		    },6000);
+	setTimeout(function(){
+			$("#img4").fadeIn(1000);
+		    },6000);
+	setTimeout(function(){
+			$("#img4").fadeOut(1000);
+		    },8000);
+	setTimeout(function(){
+			$("#img5").fadeIn(1000);
+		    },8000);
+	setTimeout(function(){
+			$("#img5").fadeOut(1000);
+		    },10000);
+    setTimeout(function(){
+			$("#img1").fadeIn(1000);
+		    },10000);
+	setTimeout(fun1Out,2000);
+	setTimeout(fun2In,2000);
+	setTimeout(fun2Out,4000);
+	setTimeout(fun3In,4000);
+	setTimeout(fun3Out,6000);
+	setTimeout(fun4In,6000);
+	setTimeout(fun4Out,8000);
+	setTimeout(fun5In,8000);
+	setTimeout(fun5Out,10000);
+	setTimeout(fun1In,10000);
+	function fun1In(){
+		setInterval(function(){
+			$("#img1").fadeIn(1000);
+		    },10000);
+	}
+	function fun1Out(){
+		setInterval(function(){
+			$("#img1").fadeOut(1000);
+		    },10000);
+	}
+	function fun2In(){
+		setInterval(function(){
+			$("#img2").fadeIn(1000);
+		    },10000);
+	}
+	function fun2Out(){
+		setInterval(function(){
+			$("#img2").fadeOut(1000);
+		    },10000);
+	}
+	function fun3In(){
+		setInterval(function(){
+			$("#img3").fadeIn(1000);
+		    },10000);
+	}
+	function fun3Out(){
+		setInterval(function(){
+			$("#img3").fadeOut(1000);
+		    },10000);
+	}
+	function fun4In(){
+		setInterval(function(){
+			$("#img4").fadeIn(1000);
+		    },10000);
+	}
+	function fun4Out(){
+		setInterval(function(){
+			$("#img4").fadeOut(1000);
+		    },10000);
+	}
+	function fun5In(){
+		setInterval(function(){
+			$("#img5").fadeIn(1000);
+		    },10000);
+	}
+	function fun5Out(){
+		setInterval(function(){
+			$("#img5").fadeOut(1000);
+		    },10000);
+	}
+	</script>
+</div>
+<div class="section section2">
+    <span style="font-size:medium;position:absolute;"><b>后台语言：ASP.net；数据库：Mysql；服务器配置：IIS服务器</b></span>
+    <p>
+    <p style="margin:0px 30px 0px 30px;float:left;"><img src="imgs/yonhlitu.png" /></p>
+    <p style="margin:0px 30px 0px 30px;float:left;"><img src="imgs/ertu.png" /></p>
+    </p>
+</div>
+<div class="section section3">
+    <span style="font-size:medium;position:absolute;">网站主页，左边为PC端截图展示，右边为移动端截图展示，拖动两个小滚动条浏览</span>
+    <p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:840px;height:400px;overflow:auto"><img src="imgs/zhuye1.jpg" /></p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:300px;height:480px;overflow:auto"><img src="imgs/zhuye2.jpg" /></p>
+    </p>
+</div>
+<div class="section section4">
+    <span style="font-size:medium;position:absolute;">进入作品详情页面，左边为PC端截图展示，右边为移动端截图展示，拖动两个小滚动条浏览</span>
+	<p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:840px;height:400px;overflow:auto"><img src="imgs/read1.jpg" /></p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:300px;height:480px;overflow:auto"><img src="imgs/read2.jpg" /></p>
+    </p>
+</div>
+<div class="section section5">
+    <span style="font-size:medium;position:absolute;">阅读章节正文，可选择上一章、下一章、回目录<br />左边为PC端截图展示，右边为移动端截图展示，拖动两个小滚动条浏览</span>
+	<p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:840px;height:400px;overflow:auto"><img src="imgs/zhengwen1.jpg" /></p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:300px;height:480px;overflow:auto"><img src="imgs/zhengwen2.jpg" /></p>
+    </p>
+</div>
+<div class="section section6">
+    <span style="font-size:medium;position:absolute;">从主页的作家专区登录，登录成功后进入作家作品管理页面<br />左边为PC端截图展示，右边为移动端截图展示，拖动两个小滚动条浏览</span>
+    <p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:840px;height:400px;overflow:auto"><img src="imgs/zuojia1.jpg" /></p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:300px;height:480px;overflow:auto"><img src="imgs/zuojia2.jpg" /></p>
+    </p>
+</div>
+<div class="section section7">
+    <span style="font-size:medium;position:absolute;">创建新作品，左边为PC端截图展示，右边为移动端截图展示，拖动两个小滚动条浏览</span>
+    <p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:840px;height:400px;overflow:auto"><img src="imgs/tianjia1.jpg" /></p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:300px;height:480px;overflow:auto"><img src="imgs/tianjia2.jpg" /></p>
+    </p>
+</div>
+<div class="section section8">
+    <span style="font-size:medium;position:absolute;">写新章节，左边为PC端截图展示，右边为移动端截图展示，拖动两个小滚动条浏览</span>
+    <p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:840px;height:400px;overflow:auto"><img src="imgs/write1.jpg" /></p>
+    <p style="margin:10px 30px 10px 30px;float:left;width:300px;height:480px;overflow:auto"><img src="imgs/write2.jpg" /></p>
+    </p>
+</div>
+<div class="section section9">
+<span><strong>END</strong></span>
+<span><strong>Thanks!</strong></span>
+<a href="#page1"><span style="font-size:medium">点此回到第一页</span></a>
+<script type="text/javascript" src="js/snow.js"></script>
+<style>
+@media screen and (max-width:960px){
+canvas{
+	width:100%;
+	height:95%;
+	}
+}
+</style>
+</div>
+</body>
+</html>
